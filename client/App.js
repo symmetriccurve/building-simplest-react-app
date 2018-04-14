@@ -12,6 +12,43 @@ module.exports = App // Once the component is created, it has to be exported so 
 // This is a ES6 way of creating a react component
 import React from 'react' //require is ES5 way, while import is ES6 way of getting library into this file
 class App extends React.Component{ // It's just Syntax, under the hood this is equal to React.createClass
+
+  /* =======================start of constructor========================== */
+  constructor(){
+    /*
+        Every React Component under goes three phases in it's life.
+
+        Initialization phase or mouting phase
+        updating phase or maintaing phase
+        unmounting phase
+
+        Each phase has differnt life cycle methods. Lets discuss the life cycle methods in Initialization phase or mouting phase
+
+       constructor life cycle method:
+       a constructor helps to initiate the state of the component.
+
+       What is a State ?
+      A state is nothing but a piece of data that is accessible through out the component, Think of this like a database to the component,
+      we can get data from database and set data on database.
+      A state is a JSON object.
+
+      for example we can set a variable called name with value Cliff in state, by doing
+
+      this.state = {
+          name: 'Cliff'
+      }
+
+      This can be accessed under render function by  { this.state.name } //shows Cliff on UI
+
+    */
+    super()
+    this.state = {
+      name: 'Cliff'
+    }
+  }
+  /* =======================end of constructor========================== */
+
+  /* =======================start of render============================ */
   render(){
     /*
       A Render method in react must and should return atleast one div( atleast a empty div ),
@@ -102,8 +139,15 @@ class App extends React.Component{ // It's just Syntax, under the hood this is e
       Adding id remains the same in react.
 
     */
-    return <h1> A Deep Dive into Render </h1>
+    return (
+        <div>
+
+            <h1> {this.state.name}</h1>
+
+        </div>
+    )
   }
+/* =======================end of render============================ */
 }
 
 module.exports = App // Both ES5 and ES6 has exports in common.
