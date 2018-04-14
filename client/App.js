@@ -48,7 +48,7 @@ class App extends React.Component{ // It's just Syntax, under the hood this is e
   }
   /* =======================end of constructor========================== */
 
-    /* =======================start of componentWillMount================== */
+  /* =======================start of componentWillMount================== */
 
     componentWillMount(){
       /*
@@ -167,6 +167,7 @@ class App extends React.Component{ // It's just Syntax, under the hood this is e
       Adding id remains the same in react.
 
     */
+    console.log('This is App, Im Rendering')
     return (
         <div>
 
@@ -176,6 +177,49 @@ class App extends React.Component{ // It's just Syntax, under the hood this is e
     )
   }
 /* =======================end of render============================ */
+
+
+/* =======================start of componentDidMount================== */
+
+  componentDidMount(){
+    /*
+      componentDidMount is part of Initialization phase as well, it is called when component first mounted or Initialized
+      This is another oppurtunity to set the state after render happens.
+
+      componentDidMount helps to set new data or change existing data inside the state after the render is called.
+      let try to change the name variable inside the state from Cliff to Dave,
+
+      As this happens after the render, UI initially shows Mark and Immediately switches to Dave( within a nanosecond ).
+
+
+      Every time a setState happens within a component, a render call is triggered.
+
+      State: "Hey Render, I have some new data do you like to see".
+      Render: "Sure, let me take a look"
+
+      So the order of methods called are
+
+      constructor  - name: 'Cliff'
+      componentWillMount  -  name: 'Mark'
+      render - Shows name: 'Mark'
+      componentDidMount - name: 'Dave'
+      render - Shows name: 'Dave'
+
+      constructor, componentWillMount, render and componentDidMount are part of Initialization phase.
+
+    */
+      this.setState({
+        name: 'Mark'
+      })
+
+      /*
+        We take advantage of  this behaviour of componentDidMount to make any async operation like API calls,
+        initially we show spinner or  loader as data is available from API, we update the state which in turn calls the render.
+      */
+  }
+
+/* =======================end of componentDidMount================== */
+
 }
 
 module.exports = App // Both ES5 and ES6 has exports in common.
