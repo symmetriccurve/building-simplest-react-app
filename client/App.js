@@ -1,15 +1,10 @@
 
-import React, { Component } from 'react';
+// This is a ES 5 way of creating a react component
+const React = require('react') // Require react library into this file and hold it into a variable called React
+var App = React.createClass({ // App is the name of the component we are about to create, we use a method createClass on React to Create new react component
+  render(){ // Every react component must and should have a render component life cycle which returns a view.
+    return <h1> This is a React ES5 way of Creating a Component </h1>
+  }
+})
 
-class App extends Component {
-    render() {
-        return (
-            <div>
-              Hello from React,
-              Lets get started !
-            </div>
-        );
-    }
-}
-
-module.exports = App
+module.exports = App // Once the component is created, it has to be exported so that we can import into other files
