@@ -4,6 +4,9 @@ Creating React Component
     ES5 Way of creating
     ES6 Way of creating
 Understanding Render - LCM
+  Common Errors and fixes
+  Conditional Rendering
+  Adding Class Names and Ids
 Understanding State - Constructor - LCM
     Adding Data to State
     Access Data from State
