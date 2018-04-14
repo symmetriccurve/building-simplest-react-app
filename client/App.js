@@ -24,7 +24,7 @@ class App extends React.Component{ // It's just Syntax, under the hood this is e
 
         Each phase has differnt life cycle methods. Lets discuss the life cycle methods in Initialization phase or mouting phase
 
-       constructor life cycle method:
+       constructor life cycle method: constructor is part of Initialization phase,
        a constructor helps to initiate the state of the component.
 
        What is a State ?
@@ -47,6 +47,34 @@ class App extends React.Component{ // It's just Syntax, under the hood this is e
     }
   }
   /* =======================end of constructor========================== */
+
+    /* =======================start of componentWillMount================== */
+
+    componentWillMount(){
+      /*
+        componentWillMount is part of Initialization phase, it is called when component first mounted or Initialized
+        if for any reason we might have missed anything to add to state or feel like changing the state even before it shows on the UI.
+        This is your oppurtuity to do it.
+
+        componentWillMount helps to set new data or change existing data inside the state before the render is called.
+
+        let try to change the name variable inside the state from Cliff to Mark, We know how to access the state variables( this.state.someStateVariable).
+        Let look at how to change th state variable values.
+
+
+
+      */
+        this.setState({
+          name: 'Mark'
+        })
+
+        /*
+          As componentWillMount is called before the render function, the name Mark is shown on the UI.
+          rener just looks at data in state, if anything has changed the data,  render simply shows the latest data.
+        */
+    }
+
+  /* =======================end of componentWillMount================== */
 
   /* =======================start of render============================ */
   render(){

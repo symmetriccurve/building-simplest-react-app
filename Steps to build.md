@@ -7,7 +7,7 @@ Understanding Render - LCM
   Common Errors and fixes
   Conditional Rendering
   Adding Class Names and Ids
-Understanding State - Constructor - LCM
+Understanding Constructor and State - LCM
     Adding Data to State
     Access Data from State
 Understanding ComponentWillMount - LCM
