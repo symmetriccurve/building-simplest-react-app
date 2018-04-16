@@ -24,16 +24,16 @@ Create a Product Card within the file
 Passing Data to ProductCard - Pass name and price of product as props
   Understanding of props
   Understanding of passing data from parent to child
-  
 Move the ProductCard as Separate Component
   With Product name
   With Product price
 
 Import Product Card in to App
+  Understanding of importing files using dot and slash notations
   Understanding of creating Child components and using them.
 Using ProductCard
 Passing Data to ProductCard - Pass name and price of product as props
-
+Adding styles to React Components.
 Prop Validation in Product Card - Handle if prop is not passed
 
 Assignment:  

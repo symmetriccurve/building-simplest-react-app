@@ -10,18 +10,52 @@ var App = React.createClass({ // App is the name of the component we are about t
 module.exports = App // Once the component is created, it has to be exported so that we can import into other files */
 
 // This is a ES6 way of creating a react component
-
-class ProductCard extends React.Component{
-    render(){
-      return(
-          <div>
-              <h1> Product: {this.props.product} </h1>
-              <h1> Price: {this.props.price}</h1>
-          </div>
-        )
-    }
-}
 import React from 'react' //require is ES5 way, while import is ES6 way of getting library into this file
+/*
+  Importing one components in to another is as simple as importing any other Library, just make sure,
+  the component name starts with Capital letter
+*/
+import ProductCard from './ProductCard'
+/*
+
+  You might be wondering why did we do,
+  import React from 'react'
+      but when we do ProductCard we did
+  import ProductCard from './ProductCard'
+
+What is the prefix './' does ?
+'./' is the location prefix.
+When we import modules from node_modules we import them directly with out a location prefix, if we do not add this prefix,
+the usual location to look for is under node_modules.
+
+thus we do   import React from 'react' .
+
+But react component we just created is not part of node_modules, thus we exactly tell the location of the file.
+thus ./  signifies that the file is under the same folder of the file which is importing.
+
+For Example:
+    A folder
+      B file
+      C file
+
+We we import C into B we simply do import C from './C'
+
+A folder
+  B file
+  C file
+D folder
+    E file
+    F File
+
+if We are importing C file into E file then we do. '../A/C'
+
+  the two dots signifies the file is not on the same folder but its on the same level of folder which we are importing
+  (A and are on the Same level)
+
+in a similiar fasion we go to any folder from any folder and import files, just make sure to have correct number of dots and slashes
+
+
+*/
 class App extends React.Component{ // It's just Syntax, under the hood this is equal to React.createClass
 
   /* =======================start of constructor========================== */
@@ -189,7 +223,7 @@ class App extends React.Component{ // It's just Syntax, under the hood this is e
     console.log('This is App, Im Rendering')
     return (
         <div>
-
+            {/* We do not have to do anything else render after we import ProductCard from a different file*/}
             <ProductCard product={this.state.products[0].name} price={this.state.products[0].price}/>
             <br></br>
             <ProductCard product={this.state.products[1].name} price={this.state.products[1].price}/>
