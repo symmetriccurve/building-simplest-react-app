@@ -21,18 +21,19 @@ Adding 3 products to State - [ {name:'Apple',price:'$10'}, {name:'Orange',price:
 Access 3 products in Render
 
 Create a Product Card within the file
+Passing Data to ProductCard - Pass name and price of product as props
+  Understanding of props
+  Understanding of passing data from parent to child
+  
 Move the ProductCard as Separate Component
-  Q: Can we create another react component inside same file ?
   With Product name
   With Product price
-  With Add Button
-  With Remove Button
+
 Import Product Card in to App
   Understanding of creating Child components and using them.
 Using ProductCard
 Passing Data to ProductCard - Pass name and price of product as props
-  Understanding of props
-  Understanding of passing data from parent to child
+
 Prop Validation in Product Card - Handle if prop is not passed
 
 Assignment:  

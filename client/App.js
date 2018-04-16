@@ -10,6 +10,17 @@ var App = React.createClass({ // App is the name of the component we are about t
 module.exports = App // Once the component is created, it has to be exported so that we can import into other files */
 
 // This is a ES6 way of creating a react component
+
+class ProductCard extends React.Component{
+    render(){
+      return(
+          <div>
+              <h1> Product: {this.props.product} </h1>
+              <h1> Price: {this.props.price}</h1>
+          </div>
+        )
+    }
+}
 import React from 'react' //require is ES5 way, while import is ES6 way of getting library into this file
 class App extends React.Component{ // It's just Syntax, under the hood this is equal to React.createClass
 
@@ -179,24 +190,11 @@ class App extends React.Component{ // It's just Syntax, under the hood this is e
     return (
         <div>
 
-              <div>
-                  <h1> Product: {this.state.products[0].name} </h1>
-                  <h1> Price: {this.state.products[0].price} </h1>
-              </div>
-
-              <br></br>
-
-              <div>
-                  <h1> Product: {this.state.products[1].name} </h1>
-                  <h1> Price: {this.state.products[1].price} </h1>
-              </div>
-
-              <br></br>
-
-              <div>
-                  <h1> Product: {this.state.products[2].name} </h1>
-                  <h1> Price: {this.state.products[2].price} </h1>
-              </div>
+            <ProductCard product={this.state.products[0].name} price={this.state.products[0].price}/>
+            <br></br>
+            <ProductCard product={this.state.products[1].name} price={this.state.products[1].price}/>
+            <br></br>
+            <ProductCard product={this.state.products[2].name} price={this.state.products[2].price}/>
 
         </div>
     )
