@@ -43,8 +43,16 @@ class App extends React.Component{ // It's just Syntax, under the hood this is e
     */
     super()
     this.state = {
-      name: 'Cliff'
+      products:[
+        { name: 'Apple', price: '$20'},
+        { name: 'Orange', price: '$10'},
+        { name: 'Grape', price: '$5'},
+      ]
     }
+    /*
+      Let add 3 products to the state and try to access them inside the render function
+
+    */
   }
   /* =======================end of constructor========================== */
 
@@ -64,9 +72,9 @@ class App extends React.Component{ // It's just Syntax, under the hood this is e
 
 
       */
-        this.setState({
-          name: 'Mark'
-        })
+        // this.setState({
+        //   name: 'Mark'
+        // })
 
         /*
           As componentWillMount is called before the render function, the name Mark is shown on the UI.
@@ -171,7 +179,24 @@ class App extends React.Component{ // It's just Syntax, under the hood this is e
     return (
         <div>
 
-            <h1> {this.state.name}</h1>
+              <div>
+                  <h1> Product: {this.state.products[0].name} </h1>
+                  <h1> Price: {this.state.products[0].price} </h1>
+              </div>
+
+              <br></br>
+
+              <div>
+                  <h1> Product: {this.state.products[1].name} </h1>
+                  <h1> Price: {this.state.products[1].price} </h1>
+              </div>
+
+              <br></br>
+
+              <div>
+                  <h1> Product: {this.state.products[2].name} </h1>
+                  <h1> Price: {this.state.products[2].price} </h1>
+              </div>
 
         </div>
     )

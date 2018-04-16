@@ -15,12 +15,13 @@ Understanding ComponentWillMount - LCM
 Understanding ComponentDidMount - LCM
     Setting State
 
-Difference between ComponentWillMount and ComponentDidMount
+Q : Difference between ComponentWillMount and ComponentDidMount ?
 
 Adding 3 products to State - [ {name:'Apple',price:'$10'}, {name:'Orange',price:'$10'}, {name:'Banana',price:'$10'} ]
 Access 3 products in Render
 
-Create a Product Card
+Create a Product Card within the file
+Move the ProductCard as Separate Component
   Q: Can we create another react component inside same file ?
   With Product name
   With Product price
