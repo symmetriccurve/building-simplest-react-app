@@ -68,3 +68,11 @@ Handle ProductContainer if products are not available
   Understanding of Conditional Rendering
 Logging Props in ComponentWillReceiveProps of ProductContainer
   Understanding of ComponentWillReceiveProps LCM - nextProps
+  
+  
+  
+  
+  After Completion:
+We will be using enzyme, chai and sinon to test the react components
+    understanding of unit testing.
+    
